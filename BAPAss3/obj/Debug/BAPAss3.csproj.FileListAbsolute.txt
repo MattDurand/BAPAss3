@@ -1,0 +1,10 @@
+C:\Users\mattd\source\repos\BAPAss3\BAPAss3\obj\Debug\BAPAss3.csprojAssemblyReference.cache
+C:\Users\mattd\source\repos\BAPAss3\BAPAss3\obj\Debug\BAPAss3.MainForm.resources
+C:\Users\mattd\source\repos\BAPAss3\BAPAss3\obj\Debug\BAPAss3.Properties.Resources.resources
+C:\Users\mattd\source\repos\BAPAss3\BAPAss3\obj\Debug\BAPAss3.csproj.GenerateResource.cache
+C:\Users\mattd\source\repos\BAPAss3\BAPAss3\obj\Debug\BAPAss3.csproj.CoreCompileInputs.cache
+C:\Users\mattd\source\repos\BAPAss3\BAPAss3\bin\Debug\BAPAss3.exe.config
+C:\Users\mattd\source\repos\BAPAss3\BAPAss3\bin\Debug\BAPAss3.exe
+C:\Users\mattd\source\repos\BAPAss3\BAPAss3\bin\Debug\BAPAss3.pdb
+C:\Users\mattd\source\repos\BAPAss3\BAPAss3\obj\Debug\BAPAss3.exe
+C:\Users\mattd\source\repos\BAPAss3\BAPAss3\obj\Debug\BAPAss3.pdb
