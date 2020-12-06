@@ -141,106 +141,54 @@ namespace BAPAss3
         }
 
         // MY METHODS
-        public int TermSummary(int months)
+        private decimal CalculateDiscount(int duration)
         {
-            decimal baseMonth = 59.00m;
-            decimal grossMonth;
-            decimal grossFullTerm;
-            decimal nextTermPrice;
+            if (duration > 2 && duration <= 6)
+                return 0.1m;
+            else if (duration <= 12)
+                return 0.2m;
+            else if (duration <= 18)
+                return 0.25m;
+            else if (duration <= 24)
+                return 0.3333m;
+            else if (duration <= 60)
+                return 0.40m;
+            else if (duration > 60)
+                return 0.6666m;
+            else
+                return 0;
+        }
+        public int TermSummary(int duration)
+        {
+            const decimal BASECOST = 59m;
 
-            if (months <= 2)
-            {
-                grossMonth = baseMonth * ZEROTWOMONTH;
-                grossFullTerm = grossMonth * Convert.ToDecimal(months);
-                nextTermPrice = (baseMonth * THREESIXMONTH) * 3;
+            int nextDiscountBracket;
+            decimal grossMonth, grossFullTerm, nextTermPrice;
 
-                //Price Per Month
-                PricePerMonthLabel.Text = grossMonth.ToString();
-                //Price Full Term
-                PriceFullTermLabel.Text = grossFullTerm.ToString();
-                //Price @ Start Next Full Term
-                PriceNextTermLabel.Text = nextTermPrice.ToString();
+            if (duration > 2 && duration <= 6)
+                nextDiscountBracket = 7;
+            else if (duration <= 12)
+                nextDiscountBracket = 13;
+            else if (duration <= 18)
+                nextDiscountBracket = 19;
+            else if (duration <= 24)
+                nextDiscountBracket = 25;
+            else if (duration <= 60)
+                nextDiscountBracket = 60;
+            else if (duration > 60)
+                nextDiscountBracket = 64;
+            else
+                nextDiscountBracket = 2;
 
-            }
-            else if (months > 2 && months <= 6)
-            {
-                grossMonth = baseMonth * THREESIXMONTH;
-                grossFullTerm = grossMonth * Convert.ToDecimal(months);
-                nextTermPrice = (baseMonth * SEVENTWELVEMONTH) * 7;
+            grossMonth = BASECOST * (1 - this.CalculateDiscount(duration));
+            grossFullTerm = grossMonth * duration;
+            nextTermPrice = BASECOST * nextDiscountBracket * (1 - this.CalculateDiscount(nextDiscountBracket));
 
-                //Price Per Month
-                PricePerMonthLabel.Text = grossMonth.ToString();
-                //Price Full Term
-                PriceFullTermLabel.Text = grossFullTerm.ToString();
-                //Price @ Start Next Full Term
-                PriceNextTermLabel.Text = nextTermPrice.ToString();
-            }
-            else if (months > 6 && months <= 12)
-            {
-                grossMonth = baseMonth * SEVENTWELVEMONTH;
-                grossFullTerm = grossMonth * Convert.ToDecimal(months);
-                nextTermPrice = (baseMonth * THIRTEENEIGHTEENMONTH) * 13;
+            // Update labels
+            PricePerMonthLabel.Text = grossMonth.ToString();
+            PriceFullTermLabel.Text = grossFullTerm.ToString();
+            PriceNextTermLabel.Text = nextTermPrice.ToString();
 
-                //Price Per Month
-                PricePerMonthLabel.Text = grossMonth.ToString();
-                //Price Full Term
-                PriceFullTermLabel.Text = grossFullTerm.ToString();
-                //Price @ Start Next Full Term
-                PriceNextTermLabel.Text = nextTermPrice.ToString();
-            }
-            else if (months > 12 && months <= 18)
-            {
-                grossMonth = baseMonth * THIRTEENEIGHTEENMONTH;
-                grossFullTerm = grossMonth * Convert.ToDecimal(months);
-                nextTermPrice = (baseMonth * NINETEENTWENTYFOUR) * 19;
-
-                //Price Per Month
-                PricePerMonthLabel.Text = grossMonth.ToString();
-                //Price Full Term
-                PriceFullTermLabel.Text = grossFullTerm.ToString();
-                //Price @ Start Next Full Term
-                PriceNextTermLabel.Text = nextTermPrice.ToString();
-            }
-            else if (months > 18 && months <= 24)
-            {
-                grossMonth = baseMonth * NINETEENTWENTYFOUR;
-                grossFullTerm = grossMonth * Convert.ToDecimal(months);
-                nextTermPrice = (baseMonth * TWENTYFIVESIXTYMONTH) * 25;
-
-                //Price Per Month
-                PricePerMonthLabel.Text = grossMonth.ToString();
-                //Price Full Term
-                PriceFullTermLabel.Text = grossFullTerm.ToString();
-                //Price @ Start Next Full Term
-                PriceNextTermLabel.Text = nextTermPrice.ToString();
-            }
-            else if (months > 24 && months <= 60)
-            {
-                grossMonth = baseMonth * TWENTYFIVESIXTYMONTH;
-                grossFullTerm = grossMonth * Convert.ToDecimal(months);
-                nextTermPrice = (baseMonth * SIXTYPLUSMONTHS) * 61;
-
-                //Price Per Month
-                PricePerMonthLabel.Text = grossMonth.ToString();
-                //Price Full Term
-                PriceFullTermLabel.Text = grossFullTerm.ToString();
-                //Price @ Start Next Full Term
-                PriceNextTermLabel.Text = nextTermPrice.ToString();
-            }
-            else if (months > 60)
-            {
-                grossMonth = baseMonth * SIXTYPLUSMONTHS;
-                grossFullTerm = grossMonth * Convert.ToDecimal(months);
-
-                //Price Per Month
-                PricePerMonthLabel.Text = grossMonth.ToString();
-                //Price Full Term
-                PriceFullTermLabel.Text = grossFullTerm.ToString();
-                //Price @ Start Next Full Term
-                PriceNextTermLabel.Text = grossFullTerm.ToString();
-
-                label7.Text = "You've maximised savings!";
-            }
             return 1;
         }
 

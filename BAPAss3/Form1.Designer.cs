@@ -62,6 +62,7 @@
             this.label10 = new System.Windows.Forms.Label();
             this.MembershipIDLabel = new System.Windows.Forms.Label();
             this.PricingGroupBox = new System.Windows.Forms.GroupBox();
+            this.TermTextBox = new System.Windows.Forms.NumericUpDown();
             this.SummaryGroupBox = new System.Windows.Forms.GroupBox();
             this.SearchGroupBox = new System.Windows.Forms.GroupBox();
             this.ButtonPanel = new System.Windows.Forms.Panel();
@@ -70,14 +71,27 @@
             this.SummaryButton = new System.Windows.Forms.Button();
             this.ClearButton = new System.Windows.Forms.Button();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.TermTextBox = new System.Windows.Forms.NumericUpDown();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.AverageFeeTextBox = new System.Windows.Forms.Label();
+            this.AverageTermLengthTextBox = new System.Windows.Forms.Label();
+            this.TotalFeesTextBox = new System.Windows.Forms.Label();
+            this.TotalMembersTextBox = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.QueryButton = new System.Windows.Forms.Button();
+            this.listBox1 = new System.Windows.Forms.ListBox();
             this.PasswordPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PricingPictureBox)).BeginInit();
             this.QuotePanel.SuspendLayout();
             this.MembershipDetailsGroupBox.SuspendLayout();
             this.PricingGroupBox.SuspendLayout();
-            this.ButtonPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TermTextBox)).BeginInit();
+            this.SummaryGroupBox.SuspendLayout();
+            this.SearchGroupBox.SuspendLayout();
+            this.ButtonPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // PasswordPanel
@@ -416,8 +430,23 @@
             this.PricingGroupBox.TabIndex = 18;
             this.PricingGroupBox.TabStop = false;
             // 
+            // TermTextBox
+            // 
+            this.TermTextBox.Location = new System.Drawing.Point(270, 44);
+            this.TermTextBox.Name = "TermTextBox";
+            this.TermTextBox.Size = new System.Drawing.Size(100, 20);
+            this.TermTextBox.TabIndex = 18;
+            // 
             // SummaryGroupBox
             // 
+            this.SummaryGroupBox.Controls.Add(this.TotalMembersTextBox);
+            this.SummaryGroupBox.Controls.Add(this.TotalFeesTextBox);
+            this.SummaryGroupBox.Controls.Add(this.AverageTermLengthTextBox);
+            this.SummaryGroupBox.Controls.Add(this.AverageFeeTextBox);
+            this.SummaryGroupBox.Controls.Add(this.label16);
+            this.SummaryGroupBox.Controls.Add(this.label15);
+            this.SummaryGroupBox.Controls.Add(this.label14);
+            this.SummaryGroupBox.Controls.Add(this.label13);
             this.SummaryGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SummaryGroupBox.Location = new System.Drawing.Point(26, 340);
             this.SummaryGroupBox.Name = "SummaryGroupBox";
@@ -428,6 +457,10 @@
             // 
             // SearchGroupBox
             // 
+            this.SearchGroupBox.Controls.Add(this.listBox1);
+            this.SearchGroupBox.Controls.Add(this.QueryButton);
+            this.SearchGroupBox.Controls.Add(this.textBox1);
+            this.SearchGroupBox.Controls.Add(this.label17);
             this.SearchGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SearchGroupBox.Location = new System.Drawing.Point(540, 340);
             this.SearchGroupBox.Name = "SearchGroupBox";
@@ -498,12 +531,114 @@
             this.toolTip1.IsBalloon = true;
             this.toolTip1.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
             // 
-            // TermTextBox
+            // label13
             // 
-            this.TermTextBox.Location = new System.Drawing.Point(270, 44);
-            this.TermTextBox.Name = "TermTextBox";
-            this.TermTextBox.Size = new System.Drawing.Size(100, 20);
-            this.TermTextBox.TabIndex = 18;
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(58, 69);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(112, 16);
+            this.label13.TabIndex = 0;
+            this.label13.Text = "Total Members";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(58, 100);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(83, 16);
+            this.label14.TabIndex = 1;
+            this.label14.Text = "Total Fees";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(58, 135);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(157, 16);
+            this.label15.TabIndex = 2;
+            this.label15.Text = "Average Term Length";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(58, 172);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(98, 16);
+            this.label16.TabIndex = 3;
+            this.label16.Text = "Average Fee";
+            // 
+            // AverageFeeTextBox
+            // 
+            this.AverageFeeTextBox.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.AverageFeeTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.AverageFeeTextBox.Location = new System.Drawing.Point(250, 171);
+            this.AverageFeeTextBox.Name = "AverageFeeTextBox";
+            this.AverageFeeTextBox.Size = new System.Drawing.Size(120, 22);
+            this.AverageFeeTextBox.TabIndex = 15;
+            // 
+            // AverageTermLengthTextBox
+            // 
+            this.AverageTermLengthTextBox.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.AverageTermLengthTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.AverageTermLengthTextBox.Location = new System.Drawing.Point(250, 134);
+            this.AverageTermLengthTextBox.Name = "AverageTermLengthTextBox";
+            this.AverageTermLengthTextBox.Size = new System.Drawing.Size(120, 22);
+            this.AverageTermLengthTextBox.TabIndex = 16;
+            // 
+            // TotalFeesTextBox
+            // 
+            this.TotalFeesTextBox.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.TotalFeesTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TotalFeesTextBox.Location = new System.Drawing.Point(250, 99);
+            this.TotalFeesTextBox.Name = "TotalFeesTextBox";
+            this.TotalFeesTextBox.Size = new System.Drawing.Size(120, 22);
+            this.TotalFeesTextBox.TabIndex = 17;
+            // 
+            // TotalMembersTextBox
+            // 
+            this.TotalMembersTextBox.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.TotalMembersTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TotalMembersTextBox.Location = new System.Drawing.Point(250, 68);
+            this.TotalMembersTextBox.Name = "TotalMembersTextBox";
+            this.TotalMembersTextBox.Size = new System.Drawing.Size(120, 22);
+            this.TotalMembersTextBox.TabIndex = 18;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(23, 45);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(102, 16);
+            this.label17.TabIndex = 0;
+            this.label17.Text = "Search Query";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(131, 45);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.PasswordChar = '*';
+            this.textBox1.Size = new System.Drawing.Size(120, 22);
+            this.textBox1.TabIndex = 4;
+            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // QueryButton
+            // 
+            this.QueryButton.Location = new System.Drawing.Point(273, 45);
+            this.QueryButton.Name = "QueryButton";
+            this.QueryButton.Size = new System.Drawing.Size(75, 23);
+            this.QueryButton.TabIndex = 19;
+            this.QueryButton.Text = "&Search";
+            this.toolTip1.SetToolTip(this.QueryButton, "Press to proceed with processing membership");
+            this.QueryButton.UseVisualStyleBackColor = true;
+            // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 16;
+            this.listBox1.Location = new System.Drawing.Point(26, 83);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(322, 132);
+            this.listBox1.TabIndex = 20;
             // 
             // MainForm
             // 
@@ -529,8 +664,12 @@
             this.MembershipDetailsGroupBox.PerformLayout();
             this.PricingGroupBox.ResumeLayout(false);
             this.PricingGroupBox.PerformLayout();
-            this.ButtonPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.TermTextBox)).EndInit();
+            this.SummaryGroupBox.ResumeLayout(false);
+            this.SummaryGroupBox.PerformLayout();
+            this.SearchGroupBox.ResumeLayout(false);
+            this.SearchGroupBox.PerformLayout();
+            this.ButtonPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -578,6 +717,18 @@
         private System.Windows.Forms.Button SearchButton;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.NumericUpDown TermTextBox;
+        private System.Windows.Forms.Label TotalMembersTextBox;
+        private System.Windows.Forms.Label TotalFeesTextBox;
+        private System.Windows.Forms.Label AverageTermLengthTextBox;
+        private System.Windows.Forms.Label AverageFeeTextBox;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.Button QueryButton;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label17;
     }
 }
 
