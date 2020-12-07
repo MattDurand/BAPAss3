@@ -44,7 +44,7 @@
             this.PriceFullTermLabel = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.PriceNextTermLabel = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            this.SalesPromptLabel = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.ProceedButton = new System.Windows.Forms.Button();
             this.ClientConfirmedTextBox = new System.Windows.Forms.TextBox();
@@ -64,25 +64,25 @@
             this.PricingGroupBox = new System.Windows.Forms.GroupBox();
             this.TermTextBox = new System.Windows.Forms.NumericUpDown();
             this.SummaryGroupBox = new System.Windows.Forms.GroupBox();
+            this.TotalMembersTextBox = new System.Windows.Forms.Label();
+            this.TotalFeesTextBox = new System.Windows.Forms.Label();
+            this.AverageTermLengthTextBox = new System.Windows.Forms.Label();
+            this.AverageFeeTextBox = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
             this.SearchGroupBox = new System.Windows.Forms.GroupBox();
+            this.SearchResultListBox = new System.Windows.Forms.ListBox();
+            this.QueryButton = new System.Windows.Forms.Button();
+            this.SearchQueryTextBox = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
             this.ButtonPanel = new System.Windows.Forms.Panel();
             this.SearchButton = new System.Windows.Forms.Button();
             this.ExitButton = new System.Windows.Forms.Button();
             this.SummaryButton = new System.Windows.Forms.Button();
             this.ClearButton = new System.Windows.Forms.Button();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.AverageFeeTextBox = new System.Windows.Forms.Label();
-            this.AverageTermLengthTextBox = new System.Windows.Forms.Label();
-            this.TotalFeesTextBox = new System.Windows.Forms.Label();
-            this.TotalMembersTextBox = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.QueryButton = new System.Windows.Forms.Button();
-            this.listBox1 = new System.Windows.Forms.ListBox();
             this.PasswordPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PricingPictureBox)).BeginInit();
             this.QuotePanel.SuspendLayout();
@@ -231,16 +231,15 @@
             this.PriceNextTermLabel.Size = new System.Drawing.Size(75, 22);
             this.PriceNextTermLabel.TabIndex = 11;
             // 
-            // label7
+            // SalesPromptLabel
             // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label7.ForeColor = System.Drawing.Color.DarkRed;
-            this.label7.Location = new System.Drawing.Point(42, 130);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(142, 13);
-            this.label7.TabIndex = 12;
-            this.label7.Text = "Your Sales Prompt Here";
+            this.SalesPromptLabel.AutoSize = true;
+            this.SalesPromptLabel.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.SalesPromptLabel.ForeColor = System.Drawing.Color.DarkRed;
+            this.SalesPromptLabel.Location = new System.Drawing.Point(14, 129);
+            this.SalesPromptLabel.Name = "SalesPromptLabel";
+            this.SalesPromptLabel.Size = new System.Drawing.Size(0, 13);
+            this.SalesPromptLabel.TabIndex = 12;
             // 
             // label8
             // 
@@ -264,6 +263,7 @@
             // 
             // ClientConfirmedTextBox
             // 
+            this.ClientConfirmedTextBox.Enabled = false;
             this.ClientConfirmedTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ClientConfirmedTextBox.Location = new System.Drawing.Point(270, 265);
             this.ClientConfirmedTextBox.Name = "ClientConfirmedTextBox";
@@ -277,7 +277,7 @@
             this.QuotePanel.Controls.Add(this.PricePerMonthLabel);
             this.QuotePanel.Controls.Add(this.PriceFullTermLabel);
             this.QuotePanel.Controls.Add(this.PriceNextTermLabel);
-            this.QuotePanel.Controls.Add(this.label7);
+            this.QuotePanel.Controls.Add(this.SalesPromptLabel);
             this.QuotePanel.Controls.Add(this.label6);
             this.QuotePanel.Controls.Add(this.label);
             this.QuotePanel.Controls.Add(this.label4);
@@ -341,7 +341,6 @@
             // 
             this.EmailTextBox.Location = new System.Drawing.Point(201, 181);
             this.EmailTextBox.Name = "EmailTextBox";
-            this.EmailTextBox.PasswordChar = '*';
             this.EmailTextBox.Size = new System.Drawing.Size(121, 20);
             this.EmailTextBox.TabIndex = 18;
             this.EmailTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -360,7 +359,6 @@
             // 
             this.TelephoneTextBox.Location = new System.Drawing.Point(201, 144);
             this.TelephoneTextBox.Name = "TelephoneTextBox";
-            this.TelephoneTextBox.PasswordChar = '*';
             this.TelephoneTextBox.Size = new System.Drawing.Size(120, 20);
             this.TelephoneTextBox.TabIndex = 16;
             this.TelephoneTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -379,7 +377,6 @@
             // 
             this.FullNameTextBox.Location = new System.Drawing.Point(201, 103);
             this.FullNameTextBox.Name = "FullNameTextBox";
-            this.FullNameTextBox.PasswordChar = '*';
             this.FullNameTextBox.Size = new System.Drawing.Size(120, 20);
             this.FullNameTextBox.TabIndex = 3;
             this.FullNameTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -455,11 +452,83 @@
             this.SummaryGroupBox.TabStop = false;
             this.SummaryGroupBox.Text = "Summary Data";
             // 
+            // TotalMembersTextBox
+            // 
+            this.TotalMembersTextBox.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.TotalMembersTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TotalMembersTextBox.Location = new System.Drawing.Point(250, 63);
+            this.TotalMembersTextBox.Name = "TotalMembersTextBox";
+            this.TotalMembersTextBox.Size = new System.Drawing.Size(120, 22);
+            this.TotalMembersTextBox.TabIndex = 18;
+            // 
+            // TotalFeesTextBox
+            // 
+            this.TotalFeesTextBox.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.TotalFeesTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TotalFeesTextBox.Location = new System.Drawing.Point(250, 100);
+            this.TotalFeesTextBox.Name = "TotalFeesTextBox";
+            this.TotalFeesTextBox.Size = new System.Drawing.Size(120, 22);
+            this.TotalFeesTextBox.TabIndex = 17;
+            // 
+            // AverageTermLengthTextBox
+            // 
+            this.AverageTermLengthTextBox.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.AverageTermLengthTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.AverageTermLengthTextBox.Location = new System.Drawing.Point(250, 135);
+            this.AverageTermLengthTextBox.Name = "AverageTermLengthTextBox";
+            this.AverageTermLengthTextBox.Size = new System.Drawing.Size(120, 22);
+            this.AverageTermLengthTextBox.TabIndex = 16;
+            // 
+            // AverageFeeTextBox
+            // 
+            this.AverageFeeTextBox.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.AverageFeeTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.AverageFeeTextBox.Location = new System.Drawing.Point(250, 171);
+            this.AverageFeeTextBox.Name = "AverageFeeTextBox";
+            this.AverageFeeTextBox.Size = new System.Drawing.Size(120, 22);
+            this.AverageFeeTextBox.TabIndex = 15;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(58, 172);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(98, 16);
+            this.label16.TabIndex = 3;
+            this.label16.Text = "Average Fee";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(58, 136);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(157, 16);
+            this.label15.TabIndex = 2;
+            this.label15.Text = "Average Term Length";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(58, 101);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(83, 16);
+            this.label14.TabIndex = 1;
+            this.label14.Text = "Total Fees";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(58, 69);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(112, 16);
+            this.label13.TabIndex = 0;
+            this.label13.Text = "Total Members";
+            // 
             // SearchGroupBox
             // 
-            this.SearchGroupBox.Controls.Add(this.listBox1);
+            this.SearchGroupBox.Controls.Add(this.SearchResultListBox);
             this.SearchGroupBox.Controls.Add(this.QueryButton);
-            this.SearchGroupBox.Controls.Add(this.textBox1);
+            this.SearchGroupBox.Controls.Add(this.SearchQueryTextBox);
             this.SearchGroupBox.Controls.Add(this.label17);
             this.SearchGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SearchGroupBox.Location = new System.Drawing.Point(540, 340);
@@ -468,6 +537,43 @@
             this.SearchGroupBox.TabIndex = 20;
             this.SearchGroupBox.TabStop = false;
             this.SearchGroupBox.Text = "Search";
+            // 
+            // SearchResultListBox
+            // 
+            this.SearchResultListBox.FormattingEnabled = true;
+            this.SearchResultListBox.ItemHeight = 16;
+            this.SearchResultListBox.Location = new System.Drawing.Point(-1, 82);
+            this.SearchResultListBox.Name = "SearchResultListBox";
+            this.SearchResultListBox.Size = new System.Drawing.Size(370, 132);
+            this.SearchResultListBox.TabIndex = 20;
+            // 
+            // QueryButton
+            // 
+            this.QueryButton.Location = new System.Drawing.Point(273, 45);
+            this.QueryButton.Name = "QueryButton";
+            this.QueryButton.Size = new System.Drawing.Size(75, 23);
+            this.QueryButton.TabIndex = 19;
+            this.QueryButton.Text = "Se&arch";
+            this.toolTip1.SetToolTip(this.QueryButton, "Press to proceed with processing membership");
+            this.QueryButton.UseVisualStyleBackColor = true;
+            this.QueryButton.Click += new System.EventHandler(this.QueryButton_Click);
+            // 
+            // SearchQueryTextBox
+            // 
+            this.SearchQueryTextBox.Location = new System.Drawing.Point(131, 45);
+            this.SearchQueryTextBox.Name = "SearchQueryTextBox";
+            this.SearchQueryTextBox.Size = new System.Drawing.Size(120, 22);
+            this.SearchQueryTextBox.TabIndex = 4;
+            this.SearchQueryTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(23, 45);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(102, 16);
+            this.label17.TabIndex = 0;
+            this.label17.Text = "Search Query";
             // 
             // ButtonPanel
             // 
@@ -531,115 +637,6 @@
             this.toolTip1.IsBalloon = true;
             this.toolTip1.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
             // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(58, 69);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(112, 16);
-            this.label13.TabIndex = 0;
-            this.label13.Text = "Total Members";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(58, 100);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(83, 16);
-            this.label14.TabIndex = 1;
-            this.label14.Text = "Total Fees";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(58, 135);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(157, 16);
-            this.label15.TabIndex = 2;
-            this.label15.Text = "Average Term Length";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(58, 172);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(98, 16);
-            this.label16.TabIndex = 3;
-            this.label16.Text = "Average Fee";
-            // 
-            // AverageFeeTextBox
-            // 
-            this.AverageFeeTextBox.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.AverageFeeTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.AverageFeeTextBox.Location = new System.Drawing.Point(250, 171);
-            this.AverageFeeTextBox.Name = "AverageFeeTextBox";
-            this.AverageFeeTextBox.Size = new System.Drawing.Size(120, 22);
-            this.AverageFeeTextBox.TabIndex = 15;
-            // 
-            // AverageTermLengthTextBox
-            // 
-            this.AverageTermLengthTextBox.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.AverageTermLengthTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.AverageTermLengthTextBox.Location = new System.Drawing.Point(250, 134);
-            this.AverageTermLengthTextBox.Name = "AverageTermLengthTextBox";
-            this.AverageTermLengthTextBox.Size = new System.Drawing.Size(120, 22);
-            this.AverageTermLengthTextBox.TabIndex = 16;
-            // 
-            // TotalFeesTextBox
-            // 
-            this.TotalFeesTextBox.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.TotalFeesTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.TotalFeesTextBox.Location = new System.Drawing.Point(250, 99);
-            this.TotalFeesTextBox.Name = "TotalFeesTextBox";
-            this.TotalFeesTextBox.Size = new System.Drawing.Size(120, 22);
-            this.TotalFeesTextBox.TabIndex = 17;
-            // 
-            // TotalMembersTextBox
-            // 
-            this.TotalMembersTextBox.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.TotalMembersTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.TotalMembersTextBox.Location = new System.Drawing.Point(250, 68);
-            this.TotalMembersTextBox.Name = "TotalMembersTextBox";
-            this.TotalMembersTextBox.Size = new System.Drawing.Size(120, 22);
-            this.TotalMembersTextBox.TabIndex = 18;
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(23, 45);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(102, 16);
-            this.label17.TabIndex = 0;
-            this.label17.Text = "Search Query";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(131, 45);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.PasswordChar = '*';
-            this.textBox1.Size = new System.Drawing.Size(120, 22);
-            this.textBox1.TabIndex = 4;
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // QueryButton
-            // 
-            this.QueryButton.Location = new System.Drawing.Point(273, 45);
-            this.QueryButton.Name = "QueryButton";
-            this.QueryButton.Size = new System.Drawing.Size(75, 23);
-            this.QueryButton.TabIndex = 19;
-            this.QueryButton.Text = "&Search";
-            this.toolTip1.SetToolTip(this.QueryButton, "Press to proceed with processing membership");
-            this.QueryButton.UseVisualStyleBackColor = true;
-            // 
-            // listBox1
-            // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 16;
-            this.listBox1.Location = new System.Drawing.Point(26, 83);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(322, 132);
-            this.listBox1.TabIndex = 20;
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
@@ -685,7 +682,7 @@
         private System.Windows.Forms.Button ProceedButton;
         private System.Windows.Forms.TextBox ClientConfirmedTextBox;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label SalesPromptLabel;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label;
         private System.Windows.Forms.Button DisplayButton;
@@ -725,9 +722,9 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ListBox SearchResultListBox;
         private System.Windows.Forms.Button QueryButton;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox SearchQueryTextBox;
         private System.Windows.Forms.Label label17;
     }
 }
